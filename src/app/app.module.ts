@@ -8,6 +8,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ItemsComponent } from './components/items/items.component';
 import { ItemComponent } from './components/item/item.component';
 import { CreateFormComponent } from './components/create-form/create-form.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -15,14 +17,16 @@ import { CreateFormComponent } from './components/create-form/create-form.compon
     HeaderComponent,
     ItemsComponent,
     ItemComponent,
-    CreateFormComponent
+    CreateFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
