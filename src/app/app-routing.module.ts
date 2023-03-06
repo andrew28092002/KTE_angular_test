@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { CreateFormComponent } from './components/create-form/create-form.component';
-import { ItemDetailsComponent } from './components/item-details/item-details.component';
-import { ItemsComponent } from './components/items/items.component';
-
 
 const routes: Routes = [
   {
     path: '',
-    component: ItemsComponent,
+    loadChildren: () => import('./components/items/items.module').then(m => m.ItemsModule)
   },
   {
-    path: 'item/:id',
-    component: ItemDetailsComponent
+    path: 'item',
+    loadChildren: () => import('./components/item-details/item-details.module').then(m => m.ItemDetailsModule)
   },
   {
     path: 'create',
-    component: CreateFormComponent
+    loadChildren: () => import('./components/create-form/create-form.module').then(m => m.CreateFormModule)
   }
 ];
 
