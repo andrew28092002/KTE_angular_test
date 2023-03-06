@@ -5,7 +5,7 @@ import { IItem } from "../models/item";
 
 @Injectable()
 export class ItemService{
-    url: string = 'https://fakestoreapi.com/products/'
+    url: string = 'https://sustaining-screeching-lemonade.glitch.me/products/'
     constructor(private Http: HttpClient){}
 
     getAll(): Observable<IItem[]>{
