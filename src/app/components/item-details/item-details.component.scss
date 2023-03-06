@@ -1,0 +1,14 @@
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+
+  img {
+   flex: 1.5
+  }
+
+  .description{
+    flex: 1.3
+  }
+}
