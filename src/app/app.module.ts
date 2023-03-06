@@ -10,7 +10,12 @@ import { ItemComponent } from './components/item/item.component';
 import { CreateFormComponent } from './components/create-form/create-form.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card'
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { ItemDetailsComponent } from './components/item-details/item-details.component'
 
 @NgModule({
   declarations: [
@@ -19,6 +24,7 @@ import { MatCardModule } from '@angular/material/card'
     ItemsComponent,
     ItemComponent,
     CreateFormComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,6 +33,10 @@ import { MatCardModule } from '@angular/material/card'
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
+    MatDividerModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],

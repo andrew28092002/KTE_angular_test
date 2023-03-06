@@ -1,0 +1,22 @@
+.create-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    .form{
+        padding: 25px 50px;
+        display: flex;
+        flex-direction: column;
+        background-color: lightgray;
+        border-radius: 5px;
+
+        .file-input{
+            margin-bottom: 15px;
+
+            span{
+                margin-left: 15px;
+            }
+        }
+    }
+}
