@@ -10,4 +10,8 @@ export class ItemService{
     getAll(): Observable<IItem[]>{
         return this.Http.get<IItem[]>('https://fakestoreapi.com/products')
     }
+
+    getById(id: string): Observable<IItem>{
+        return this.Http.get<IItem>('https://fakestoreapi.com/products/' + id)
+    }
 }
