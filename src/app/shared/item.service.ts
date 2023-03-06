@@ -14,4 +14,8 @@ export class ItemService{
     getById(id: string): Observable<IItem>{
         return this.Http.get<IItem>('https://fakestoreapi.com/products/' + id)
     }
+
+    create(item: IItem){
+        return this.Http.post('https://fakestoreapi.com/products', item)
+    }
 }

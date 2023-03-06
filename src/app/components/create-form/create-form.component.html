@@ -1,33 +1,30 @@
 <div class="create-form">
-  <form class="form">
+  <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
     <mat-form-field class="example-full-width">
       <mat-label>Title</mat-label>
-      <input matInput />
+      <input matInput formControlName="title"/>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Price</mat-label>
-      <input matInput />
+      <input matInput formControlName="price"/>
     </mat-form-field>
     <mat-form-field class="example-full-width">
       <mat-label>Description</mat-label>
-      <input matInput />
+      <input matInput formControlName="description"/>
     </mat-form-field>
 
-    <div class="file-input">
-      <button type="button" mat-raised-button (click)="fileInput.click()">
-        Choose File
-      </button>
-      <input hidden (change)="onFileSelected($event)" #fileInput type="file" />
-      <span class="file-name">{{ selectedFile?.name }}</span>
-    </div>
+    <mat-form-field class="example-full-width" >
+      <mat-label>Image Url</mat-label>
+      <input matInput formControlName="image"/>
+    </mat-form-field>
 
     <mat-form-field appearance="fill">
-      <mat-label>Cars</mat-label>
-      <mat-select matNativeControl required>
-        <mat-option value="volvo">Volvo</mat-option>
-        <mat-option value="saab">Saab</mat-option>
-        <mat-option value="mercedes">Mercedes</mat-option>
-        <mat-option value="audi">Audi</mat-option>
+      <mat-label>Category</mat-label>
+      <mat-select matNativeControl required formControlName="category">
+        <mat-option value="men's clothing">men's clothing</mat-option>
+        <mat-option value="jewelery">jewelery</mat-option>
+        <mat-option value="electronics">electronics</mat-option>
+        <mat-option value="women's clothing">women's clothing</mat-option>
       </mat-select>
     </mat-form-field>
     <button type="submit" mat-flat-button color="primary">Submit</button>
