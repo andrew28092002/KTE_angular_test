@@ -5,17 +5,18 @@ import { IItem } from "../models/item";
 
 @Injectable()
 export class ItemService{
+    url: string = 'https://fakestoreapi.com/products/'
     constructor(private Http: HttpClient){}
 
     getAll(): Observable<IItem[]>{
-        return this.Http.get<IItem[]>('https://fakestoreapi.com/products')
+        return this.Http.get<IItem[]>(this.url)
     }
 
     getById(id: string): Observable<IItem>{
-        return this.Http.get<IItem>('https://fakestoreapi.com/products/' + id)
+        return this.Http.get<IItem>(this.url + id)
     }
 
     create(item: IItem){
-        return this.Http.post('https://fakestoreapi.com/products', item)
+        return this.Http.post(this.url, item)
     }
 }
