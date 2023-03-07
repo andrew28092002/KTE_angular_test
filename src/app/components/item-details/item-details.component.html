@@ -9,5 +9,8 @@
     </p>
     <h1>{{ item.price | currency }}</h1>
   </div>
+</div>
 
+<div class="loading" *ngElse>
+  <mat-progress-spinner></mat-progress-spinner>
 </div>
