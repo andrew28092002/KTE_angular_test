@@ -9,3 +9,21 @@ app-item{
     max-width: 25%;
     padding: 20px 25px;
 }
+
+@media screen and (max-width: 1028px) {
+    app-item{
+        max-width: 33%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    app-item{
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    app-item{
+        max-width: 100%;
+    }
+}
