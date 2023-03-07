@@ -1,6 +1,5 @@
 <div class="items" *ngIf="items; else elseBlock">
   <app-item *ngFor="let item of items" [item]="item"></app-item>
-  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
 </div>
 
 <ng-template #elseBlock>
