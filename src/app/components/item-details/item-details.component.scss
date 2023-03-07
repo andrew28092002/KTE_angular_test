@@ -4,13 +4,14 @@
   align-items: flex-start;
   flex-flow: row nowrap;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 30px auto;
 
   img {
-   flex: 1
+   max-width: 50%;
   }
 
   .description{
+    margin-left: 30px;
     flex: 0.7
   }
 }
