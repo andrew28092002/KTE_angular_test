@@ -1,9 +1,7 @@
-<div class="items" *ngIf="items; else elseBlock">
+<div class="items" *ngIf="items.length>0; else elseBlock">
   <app-item *ngFor="let item of items" [item]="item"></app-item>
 </div>
 
 <ng-template #elseBlock>
-  <div class="loading">
-    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
-  </div>
+  <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
 </ng-template>
