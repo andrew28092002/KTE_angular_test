@@ -1,4 +1,4 @@
-# Тестовое задание на вакансию "Middle Frontend Developer(Angular)"   
+# Тестовое задание на позицию "Middle Frontend Developer(Angular)"   
 
 [GH-PAGES](https://andrew28092002.github.io/KTE_angular_test/)
 
